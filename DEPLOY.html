@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Deploy Luma Labs Playground</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 800px; margin: 50px auto; padding: 20px; }
+        .step { background: #f5f5f5; padding: 20px; margin: 20px 0; border-radius: 8px; }
+        .deploy-btn { background: #000; color: white; padding: 15px 30px; text-decoration: none; border-radius: 8px; display: inline-block; margin: 10px 0; }
+        .deploy-btn:hover { background: #333; }
+        code { background: #eee; padding: 2px 6px; border-radius: 4px; }
+    </style>
+</head>
+<body>
+    <h1>🚀 Deploy Your Luma Labs Playground</h1>
+    
+    <div class="step">
+        <h2>Step 1: Upload to GitHub</h2>
+        <p>1. Go to <a href="https://github.com/new" target="_blank">https://github.com/new</a></p>
+        <p>2. Repository name: <code>luma-labs-playground</code></p>
+        <p>3. Make it Public</p>
+        <p>4. Click "Create repository"</p>
+        <p>5. Upload files by dragging this entire folder to GitHub</p>
+    </div>
+
+    <div class="step">
+        <h2>Step 2: Deploy to Vercel</h2>
+        <a href="https://vercel.com/new" class="deploy-btn" target="_blank">
+            🚀 Deploy to Vercel
+        </a>
+        <p>1. Sign in with GitHub</p>
+        <p>2. Import your <code>luma-labs-playground</code> repository</p>
+        <p>3. Add environment variable:</p>
+        <ul>
+            <li><strong>Name:</strong> <code>LUMA_API_KEY</code></li>
+            <li><strong>Value:</strong> <code>luma-79f19c8f-5508-4100-8933-4f69c9c54c19-f9a8401b-ce17-4d66-a7c5-cc67334d05fc</code></li>
+        </ul>
+        <p>4. Click "Deploy"</p>
+    </div>
+
+    <div class="step">
+        <h2>Step 3: Alternative - Railway</h2>
+        <a href="https://railway.app/new" class="deploy-btn" target="_blank">
+            🚂 Deploy to Railway
+        </a>
+        <p>Railway is another great option that's very simple to use!</p>
+    </div>
+
+    <div class="step">
+        <h2>Step 4: Alternative - Netlify</h2>
+        <a href="https://app.netlify.com/start" class="deploy-btn" target="_blank">
+            🌐 Deploy to Netlify
+        </a>
+        <p>Drag and drop deployment option available!</p>
+    </div>
+
+    <div class="step">
+        <h2>🎯 Quick Deploy Options</h2>
+        <p><strong>Fastest:</strong> Use GitHub Desktop + Vercel</p>
+        <p><strong>No Git:</strong> Upload zip to GitHub + Vercel</p>
+        <p><strong>Drag & Drop:</strong> Use Netlify for instant deployment</p>
+    </div>
+
+    <script>
+        // Auto-open GitHub new repo page
+        setTimeout(() => {
+            if (confirm('Open GitHub to create new repository?')) {
+                window.open('https://github.com/new', '_blank');
+            }
+        }, 2000);
+    </script>
+</body>
+</html>
