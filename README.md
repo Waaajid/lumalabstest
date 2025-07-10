@@ -8,6 +8,8 @@ A beautiful, modern web-based playground for testing Luma Labs text-to-video API
 - 🖼️ **Image to Video Generation** - Animate images with text prompts
 - 🔑 **API Key Testing** - Validate your Luma Labs API keys
 - 📊 **Real-time Status Updates** - Monitor generation progress
+- ⏱️ **Live Timing Display** - Real-time elapsed timer and generation duration
+- 🎯 **Detailed Timing Info** - Request duration and total generation time
 - 📱 **Responsive Design** - Works on desktop and mobile
 - 🎛️ **Customizable Options** - Aspect ratios, looping, and more
 - 📋 **Generation History** - View and manage recent generations

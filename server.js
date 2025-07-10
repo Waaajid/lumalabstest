@@ -97,6 +97,7 @@ app.post('/api/generate-video', async (req, res) => {
         };
 
         console.log('Generating video with data:', requestData);
+        const startTime = Date.now();
 
         const response = await axios.post(`${LUMA_API_BASE_URL}/generations/video`, requestData, {
             headers: {
@@ -105,9 +106,18 @@ app.post('/api/generate-video', async (req, res) => {
             }
         });
 
+        // Add timing information to response
+        const responseData = {
+            ...response.data,
+            timing: {
+                started_at: new Date(startTime).toISOString(),
+                request_duration_ms: Date.now() - startTime
+            }
+        };
+
         res.json({ 
             success: true, 
-            data: response.data 
+            data: responseData 
         });
     } catch (error) {
         console.error('Video generation error:', error.response?.data || error.message);
@@ -164,6 +174,7 @@ app.post('/api/generate-video-from-image', upload.single('image'), async (req, r
         };
 
         console.log('Generating video from image with prompt:', prompt);
+        const startTime = Date.now();
 
         const response = await axios.post(`${LUMA_API_BASE_URL}/generations/video`, requestData, {
             headers: {
@@ -175,9 +186,18 @@ app.post('/api/generate-video-from-image', upload.single('image'), async (req, r
         // Clean up uploaded file
         fs.unlinkSync(req.file.path);
 
+        // Add timing information to response
+        const responseData = {
+            ...response.data,
+            timing: {
+                started_at: new Date(startTime).toISOString(),
+                request_duration_ms: Date.now() - startTime
+            }
+        };
+
         res.json({ 
             success: true, 
-            data: response.data 
+            data: responseData 
         });
     } catch (error) {
         console.error('Video generation from image error:', error.response?.data || error.message);

@@ -1,5 +1,5 @@
 {
-  "name": "luma-labs-playground",
+  "name": "wajid-lumalabs-playground",
   "version": "1.0.0",
   "description": "A playground for testing Luma Labs text-to-video API",
   "main": "server.js",

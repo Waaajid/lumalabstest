@@ -36,14 +36,20 @@ git push -u origin main
 
 1. **Go to**: https://vercel.com/new
 2. **Import** your GitHub repository: `Waaajid/lumalabstest`
-3. **Add environment variable**:
+3. **Choose a unique project name** (one of these):
+   - `wajid-lumalabs-playground`
+   - `lumalabs-api-tester-wajid`
+   - `wajid-video-generator`
+   - `lumalabs-playground-2025`
+   - `wajid-ai-video-studio`
+4. **Add environment variable**:
    - Name: `LUMA_API_KEY`
    - Value: `luma-79f19c8f-5508-4100-8933-4f69c9c54c19-f9a8401b-ce17-4d66-a7c5-cc67334d05fc`
-4. **Click "Deploy"**
+5. **Click "Deploy"**
 
 ## ✅ Result
 
-Your playground will be live at: `https://lumalabstest.vercel.app` (or similar)
+Your playground will be live at: `https://your-chosen-name.vercel.app`
 
 ---
 
